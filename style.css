@@ -1,0 +1,211 @@
+/* 
+
+37% |  63%
+fx 40%  35%
+        30%
+        35%
+
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: NordicFont;
+    src: url(./media/Norse-Bold.otf);
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 37fr 63fr;
+    grid-template-rows: 35fr 30fr 35fr;
+}
+
+.image-sidebar {
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+    background-image: url('./media/alex-sh-jBAcX9rZF4s-unsplash.jpg');
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-size: 37vw 100vh;
+    /* background-size: auto 100vh; */
+    /* background-size: contain; */
+    background-position: center;
+    background-color: black;
+
+    display: flex;
+    flex-direction: column;
+    /* align-content: center; */
+}
+
+.logo-ribbon {
+    height: calc(.15 *100vh);
+    width: 100%;
+    margin-top: calc(.21 *100vh);
+
+    background-color: #000000bb;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: NordicFont;
+    font-size: calc(.07 *100vh);
+}
+
+.logo {
+    height: calc(.13 *100vh);
+    /* width: 100%; */
+
+}
+
+.attribution,
+.attribution * {
+    color: white
+}
+
+.attribution {
+    margin-top: auto;
+    align-self: center;
+    padding-bottom: 10px;
+}
+
+.main {
+    grid-column: 2 / -1;
+    grid-row: 1 / -1;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.header,
+.bottom {
+    background-color: #F9FAFB;
+    flex-grow: 35;
+    padding-left: 40px;
+
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 40px;
+    font-size: 2rem;
+
+}
+
+.header p {
+    padding-bottom: 15px;
+    max-width: 850px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.form-row input {
+    border-radius: 4px;
+    border: 1px solid #E5E7EB;
+    width: 262px;
+    height: 32px;
+    padding-left: 10px;
+
+}
+
+.form-row input:focus:not(input[type='password']) {
+    border-radius: 4px;
+    border: 2px solid #1d4ed8;
+    box-shadow: 1px 1px 5px 0px black;
+    /* color: red */
+    outline-width: 0;
+
+}
+
+/* .form-row input[type='password']:placeholder-shown   {
+    border: 1px solid #D55C5F;
+    color: #D55C5F;
+    box-shadow: none;
+    outline-width: 0;
+}
+form-row input[type='password']:placeholder-shown~.requirements   {
+    opacity: 0  ;
+}
+.form-row input[type='password']:not(placeholder-shown)~.requirements   {
+    opacity: 1  ;
+} */
+
+.requirements {
+    font-size: 0.75rem;
+    color: red;
+}
+
+.form-container {
+    flex-grow: 30;
+    background-color: white;
+    padding-left: 40px;
+    padding-top: 15px;
+
+    border-top: 1px solid #E5E7EB;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.form-container p {
+    margin-bottom: 40px;
+    font-size: 2rem;
+
+}
+
+.form-container label {
+    margin: 5px 0px;
+    font-size: .8rem;
+    letter-spacing: 2px;
+}
+
+form {
+    max-width: 650px;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 40px;
+    justify-items: start;
+    align-content: space-between;
+
+}
+
+.bottom {
+    padding-top: 40px;
+    box-shadow: 0px 1px 10px 0px #E5E7EB inset;
+
+}
+
+.bottom button {
+    background-color: #386254;
+    padding: 15px 50px;
+    margin-bottom: 40px;
+
+    border-radius: 7px;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.bottom spam {
+    color: #386254;
+}
